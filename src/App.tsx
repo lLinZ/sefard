@@ -73,7 +73,7 @@ const App = () => {
     }
 
     // Invertir la cadena para obtener el orden correcto de los bits
-    return resultado.split("").reverse().join("");
+    return resultado.split("").join("");
   }
 
   function forzarABits12(binario: string) {
@@ -91,7 +91,7 @@ const App = () => {
     }
 
     // Calcular la cantidad de ceros a rellenar
-    let cerosRellenar = 12 - binario.length;
+    let cerosRellenar = 8 - binario.length;
 
     if (cerosRellenar < 0) {
       return binario;
@@ -101,7 +101,7 @@ const App = () => {
     binario = "0".repeat(cerosRellenar) + binario;
 
     // Cortar la cadena a 12 bits
-    return binario.slice(0, 12);
+    return binario.slice(0, 8);
   }
 
   function printBinaryBox(bit: string) {
